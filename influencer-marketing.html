@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Influencer Marketing - Skora Media</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#fff;
+    color:#111;
+}
+
+section{
+    padding:80px 10%;
+}
+
+.hero{
+    text-align:center;
+    padding-top:90px;
+}
+
+.hero h1{
+    font-family:Georgia, serif;
+    font-size:64px;
+    line-height:1.2;
+    color:#2d2d2d;
+}
+
+.hero p{
+    margin:30px auto;
+    max-width:750px;
+    font-size:22px;
+    color:#777;
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    padding:16px 35px;
+    border:2px dashed #333;
+    color:#222;
+    text-decoration:none;
+    font-size:22px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:60px;
+    flex-wrap:wrap;
+}
+
+.stat{
+    width:170px;
+    height:170px;
+    border:2px dashed #f5a400;
+    border-radius:50%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.stat h2{
+    font-size:42px;
+    font-weight:400;
+}
+
+.stat p{
+    color:#777;
+    font-size:16px;
+}
+
+.title{
+    text-align:center;
+    font-family:Georgia, serif;
+    font-size:56px;
+    color:#303030;
+    margin-bottom:20px;
+}
+
+.sub{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 60px;
+    font-size:22px;
+    color:#777;
+    line-height:1.6;
+}
+
+.control-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+}
+
+.panel{
+    background:#fff;
+    border:1px solid #ddd;
+    padding:40px;
+    min-height:260px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.10);
+}
+
+.panel h3{
+    color:#f5a400;
+    margin-bottom:15px;
+}
+
+.table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.table th,
+.table td{
+    border:1px solid #222;
+    padding:18px;
+    text-align:left;
+    font-size:18px;
+}
+
+.bar-box{
+    display:flex;
+    align-items:end;
+    justify-content:space-around;
+    height:160px;
+    margin-top:25px;
+}
+
+.bar{
+    width:55px;
+    background:#f5b400;
+}
+
+.insight{
+    text-align:center;
+}
+
+.insight-icon{
+    width:80px;
+    height:80px;
+    background:#f5b400;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 25px;
+    font-size:38px;
+}
+
+.insight h2{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.insight span{
+    color:#f5a400;
+    font-weight:bold;
+}
+
+.platform-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+}
+
+.platform-card{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    border:1px solid #ddd;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.platform-card span{
+    font-size:50px;
+}
+
+.platform-card h3{
+    font-size:26px;
+    margin-bottom:10px;
+}
+
+.platform-card p{
+    color:#777;
+    font-size:18px;
+    line-height:1.5;
+}
+
+.black-section{
+    background:#000;
+    color:#fff;
+}
+
+.creator-tabs{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-bottom:50px;
+}
+
+.creator-tabs span{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.creator-showcase{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+}
+
+.creator-img{
+    height:360px;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+}
+
+.creator-info{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#fff;
+    color:#111;
+    padding:20px;
+}
+
+.creator-info h3{
+    font-size:24px;
+}
+
+.creator-info p{
+    color:#f5a400;
+    margin-top:8px;
+}
+
+.help-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.help-card{
+    border:1px solid #ddd;
+    padding:30px;
+    min-height:190px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.help-card span{
+    font-size:42px;
+}
+
+.help-card h3{
+    margin:15px 0;
+    font-size:24px;
+}
+
+.help-card p{
+    color:#777;
+    line-height:1.5;
+}
+
+.timeline{
+    margin-top:50px;
+}
+
+.timeline-card{
+    border:1px solid #ddd;
+    padding:30px;
+    margin-bottom:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.10);
+}
+
+.timeline-card small{
+    color:#888;
+}
+
+.timeline-card h3{
+    margin:15px 0;
+    font-size:26px;
+}
+
+.progress{
+    height:18px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:30px;
+}
+
+.progress span{
+    display:block;
+    height:100%;
+    width:70%;
+    background:linear-gradient(90deg, red, orange, green);
+}
+
+.campaign-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.campaign-card{
+    position:relative;
+    height:360px;
+    background-size:cover;
+    background-position:center;
+}
+
+.play{
+    position:absolute;
+    top:45%;
+    left:45%;
+    background:#ffc107;
+    color:#000;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+}
+
+.campaign-text{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#fff;
+    padding:18px;
+}
+
+.campaign-text h3{
+    color:#111;
+}
+
+.campaign-text p{
+    color:#f5a400;
+    margin-top:8px;
+}
+
+.dark-cases{
+    background:#000;
+    color:#fff;
+}
+
+.case-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.case-box{
+    border:1px solid #f5b400;
+    padding:35px;
+}
+
+.case-box h4{
+    color:#f5b400;
+    margin-bottom:25px;
+}
+
+.form-section{
+    text-align:center;
+}
+
+.form-section form{
+    max-width:900px;
+    margin:50px auto 0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+input, select{
+    padding:18px;
+    font-size:18px;
+    border:1px solid #ccc;
+}
+
+select{
+    grid-column:span 2;
+}
+
+button{
+    width:180px;
+    padding:16px;
+    background:#ffc107;
+    border:none;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.footer{
+    background:#282d2d;
+    color:#fff;
+    padding:70px 10%;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:35px;
+}
+
+.footer h3{
+    margin-bottom:25px;
+}
+
+.footer p{
+    margin:12px 0;
+    color:#eee;
+}
+
+.socials span{
+    display:inline-flex;
+    width:38px;
+    height:38px;
+    background:#0d6efd;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    margin-right:8px;
+}
+
+@media(max-width:768px){
+    section{
+        padding:60px 6%;
+    }
+
+    .hero h1,
+    .title{
+        font-size:38px;
+    }
+
+    .control-grid,
+    .platform-grid,
+    .help-grid,
+    .campaign-grid,
+    .case-grid,
+    .footer-grid,
+    .form-section form{
+        grid-template-columns:1fr;
+    }
+
+    .creator-showcase{
+        grid-template-columns:1fr;
+    }
+
+    select{
+        grid-column:span 1;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <h1>Architecting Long-Term<br>Brand Equity Through Creator Ecosystems.</h1>
+    <p>Move beyond one-off campaigns. Build an always-on creator engine that drives narrative consistency, trust and market share.</p>
+    <a href="contact.html" class="btn">Consult with a Growth Strategist</a>
+
+    <div class="stats">
+        <div class="stat"><h2>40%</h2><p>Lower CAC</p></div>
+        <div class="stat"><h2>3.5x</h2><p>Higher CTR</p></div>
+        <div class="stat"><h2>200+</h2><p>Brands Served</p></div>
+    </div>
+</section>
+
+<section>
+    <h2 class="title">The Influencer Marketing Control Tower</h2>
+    <p class="sub">A competitive intelligence and growth system for category leadership.</p>
+
+    <div class="control-grid">
+        <div class="panel">
+            <h3>COMPETITIVE POSITION MAP</h3>
+            <p>Engagement Rate vs. Creator Share of Voice</p>
+            <div class="bar-box">
+                <div class="bar" style="height:60px;"></div>
+                <div class="bar" style="height:100px;"></div>
+                <div class="bar" style="height:140px;"></div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <table class="table">
+                <tr><th>Metric</th><th>Your Brand</th><th>Leader</th></tr>
+                <tr><td>Engagement Rate</td><td>2.1%</td><td>4.8%</td></tr>
+                <tr><td>Share of Voice</td><td>22%</td><td>48%</td></tr>
+                <tr><td>Creator Retention</td><td>61%</td><td>89%</td></tr>
+                <tr><td>Content Velocity</td><td>12/mo</td><td>38/mo</td></tr>
+            </table>
+        </div>
+
+        <div class="panel">
+            <h3>CONTENT MIX ANALYSIS</h3>
+            <p>What content is being produced?</p>
+            <div class="bar-box">
+                <div class="bar" style="height:120px;"></div>
+                <div class="bar" style="height:80px;background:#555;"></div>
+                <div class="bar" style="height:65px;background:#8a5a44;"></div>
+            </div>
+        </div>
+
+        <div class="panel insight">
+            <div class="insight-icon">💡</div>
+            <h2>Strategic Insight</h2>
+            <p>Emotion + Creator Narrative drives <span>3.2x higher engagement</span> than product posts.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="title">The Creator Intelligence Platform</h2>
+    <p class="sub">Enterprise-grade tools for teams that treat creator marketing as a strategic function.</p>
+
+    <div class="platform-grid">
+        <div class="platform-card"><span>📊</span><div><h3>Competitive Intelligence</h3><p>Benchmark competitor creator strategies and narrative performance.</p></div></div>
+        <div class="platform-card"><span>📈</span><div><h3>Campaign Analytics</h3><p>Track engagement, sentiment and campaign performance in real time.</p></div></div>
+        <div class="platform-card"><span>🔍</span><div><h3>Creator Discovery</h3><p>Find brand-safe creators based on audience overlap and brand affinity.</p></div></div>
+        <div class="platform-card"><span>🎯</span><div><h3>Real-Time ROI</h3><p>Track brand lift, conversions and creator touchpoints clearly.</p></div></div>
+    </div>
+</section>
+
+<section class="black-section">
+    <h2 class="title" style="color:white;">Access India's Largest Creator Network</h2>
+    <p class="sub" style="color:white;">From nano to celebrity-tier creators across every category.</p>
+
+    <div class="creator-tabs">
+        <span>Fashion / Lifestyle</span>
+        <span>Travel</span>
+        <span>Food</span>
+        <span>Beauty</span>
+        <span>Fitness</span>
+        <span>Tech</span>
+        <span>Finance</span>
+    </div>
+
+    <div class="creator-showcase">
+        <div class="creator-img" style="background-image:url('images/creator 2.jpg');"></div>
+        <div class="creator-img" style="background-image:url('images/creator 3.jpg');">
+            <div class="creator-info">
+                <h3>Creator Network</h3>
+                <p>Fashion / Lifestyle Creators</p>
+            </div>
+        </div>
+        <div class="creator-img" style="background-image:url('images/creator 4.jpg');"></div>
+    </div>
+</section>
+
+<section>
+    <h2 class="title">How We Help Brands Win</h2>
+
+    <div class="help-grid">
+        <div class="help-card"><span>🔎</span><h3>Creator Vetting</h3><p>Find relevant creators with strong audience match.</p></div>
+        <div class="help-card"><span>🤝</span><h3>Brand Connect</h3><p>Facilitating high-value creator partnerships.</p></div>
+        <div class="help-card"><span>🛡️</span><h3>Narrative Authority</h3><p>Consistent storytelling to build deep community trust.</p></div>
+        <div class="help-card"><span>🎯</span><h3>Market Intelligence</h3><p>Identify competitive white spaces before campaign launch.</p></div>
+    </div>
+</section>
+
+<section>
+    <h2 class="title">Brand Acceleration Blueprint</h2>
+    <p class="sub">A 12-month structured transformation journey to outpace the competition.</p>
+
+    <div class="timeline">
+        <div class="timeline-card">
+            <small>Month 0</small>
+            <h3>Competitive Gap Analysis</h3>
+            <p>Identify white spaces in your category's influencer landscape.</p>
+        </div>
+
+        <div class="timeline-card">
+            <small>Month 6</small>
+            <h3>Scale & Optimize</h3>
+            <p>Fix content gaps and scale top-performing brand ambassadors.</p>
+        </div>
+
+        <div class="timeline-card">
+            <small>Month 12</small>
+            <h3>Category Leadership</h3>
+            <p>Move from 22% share of voice to 48% category leadership.</p>
+        </div>
+
+        <div class="progress"><span></span></div>
+    </div>
+</section>
+
+<section>
+    <h2 class="title">Creator Campaigns in Action</h2>
+    <p class="sub">Explore high-impact creator partnerships driving growth across industries.</p>
+
+    <div class="campaign-grid">
+        <div class="campaign-card" style="background-image:url('images/creator 2.jpg');">
+            <div class="play">▶</div>
+            <div class="campaign-text"><h3>Sleepwell</h3><p>Great Sleep Campaign</p></div>
+        </div>
+
+        <div class="campaign-card" style="background-image:url('images/creator 3.jpg');">
+            <div class="play">▶</div>
+            <div class="campaign-text"><h3>Dabur</h3><p>Beauty Creator Campaign</p></div>
+        </div>
+
+        <div class="campaign-card" style="background-image:url('images/creator 4.jpg');">
+            <div class="play">▶</div>
+            <div class="campaign-text"><h3>Fortune</h3><p>Influencer Masterclass</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="dark-cases">
+    <h2 class="title" style="color:white;">Proof That Creator Strategy Works</h2>
+
+    <div class="case-grid">
+        <div class="case-box">
+            <h4>Case Study</h4>
+            <h2>D2C Beauty Brand</h2>
+            <p>View the full breakdown →</p>
+        </div>
+
+        <div class="case-box">
+            <h4>Case Study</h4>
+            <h2>Enterprise Fintech</h2>
+            <p>View the full breakdown →</p>
+        </div>
+
+        <div class="case-box">
+            <h4>Case Study</h4>
+            <h2>Quick Commerce</h2>
+            <p>View the full breakdown →</p>
+        </div>
+    </div>
+</section>
+
+<section class="form-section">
+    <h2 class="title">Build your creator-led growth engine.</h2>
+    <p class="sub">Tell us your objectives. We'll build a custom creator marketing plan within 48 hours.</p>
+
+    <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Phone">
+        <input type="text" placeholder="Company Website">
+
+        <select>
+            <option>-- Select an option --</option>
+            <option>Influencer Marketing</option>
+            <option>Creator Campaign</option>
+            <option>Brand Collaboration</option>
+            <option>Full Campaign Strategy</option>
+        </select>
+
+        <button type="submit">SUBMIT</button>
+    </form>
+</section>
+
+<footer class="footer">
+    <div class="footer-grid">
+        <div>
+            <h3>Top Creators in India</h3>
+            <p>Fashion Influencers</p>
+            <p>Comedy Influencers</p>
+            <p>Education Influencers</p>
+            <p>Finance Influencers</p>
+            <p>Beauty Influencers</p>
+            <p>Tech Influencers</p>
+        </div>
+
+        <div>
+            <h3>Influencer Products</h3>
+            <p>Influencer Dashboard</p>
+            <p>Fair Pair Index</p>
+            <h3 style="margin-top:30px;">Case Studies</h3>
+            <p>D2C Case Study</p>
+            <p>FMCG Case Study</p>
+            <p>Startup Case Study</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <p>Home</p>
+            <p>Contact Us</p>
+            <p>Social Media Marketing</p>
+            <p>PR Management</p>
+            <p>Viral Meme Marketing</p>
+            <p>Privacy Policy</p>
+        </div>
+
+        <div>
+            <h3>Follow Us</h3>
+            <div class="socials">
+                <span>in</span>
+                <span>f</span>
+                <span>▶</span>
+                <span>ig</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
