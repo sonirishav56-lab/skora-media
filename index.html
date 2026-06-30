@@ -11,11 +11,12 @@
     <!-- Navbar -->
     <nav>
        <div class="logo">
-    <img src="images/skora-logo.png" alt="Skora Media Logo">
-
+    <a href="index.html">
+        <img src="images/skoramedia.logo1.png" alt="Skora Media Logo">
+    </a>
 </div>
 
-        <ul>
+      <ul class="nav-links">
            <li class="home-item">
     <a href="#">Home ▾</a>
 
@@ -67,6 +68,8 @@
 </li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+        
+<div class="menu-toggle">☰</div>
     </nav>
 
     <!-- Hero Section -->
@@ -104,7 +107,8 @@
 </div>
        </div>
 </section>
-<div class="stats">
+<section class="stats">
+
   <div class="stat-box">
     <h2>500+</h2>
     <p>Campaigns</p>
@@ -119,33 +123,17 @@
     <h2>50+</h2>
     <p>Brands</p>
   </div>
-</div>
 
-<section class="stats">
-    <div>
-        <h2 class="counter" data-target="500">0</h2>
-        <p>Creators</p>
-    </div>
+  <div class="stat-box">
+    <h2 class="counter" data-target="50">0</h2>
+    <p>Million+ Reach</p>
+  </div>
 
-    <div>
-        <h2 class="counter" data-target="50">0</h2>
-        <p>Million+ Reach</p>
-    </div>
-
-    <div>
-        <h2 class="counter" data-target="100">0</h2>
-        <p>Brands</p>
-    </div>
-
-    <div>
-        <h2 class="counter" data-target="1000">0</h2>
-        <p>Campaigns</p>
-    </div>
 </section>
 
 
 <section class="brands">
-    <h2>Trusted By Top Brands</h2>
+    <h2 style="color:white;">Trusted By Top Brands</h2>
 
     <div class="brand-slider">
         <div class="brand-track">
@@ -201,7 +189,7 @@
     <div class="why-container">
 
         <div class="why-box">
-            <h3>🚀 Creative Campaigns</h3>
+            <h3> ⬆️ Creative Campaigns</h3>
             <p>We create unique marketing ideas that grab audience attention.</p>
         </div>
 
@@ -332,8 +320,8 @@
     <h2>Contact Us</h2>
 
     <div class="card">
-        <p>📧 Email:sonirishav@gmail.com</p>
-        <p>📱 Phone: +91 7983555904</p>
+        <p>📧 Email:mediaskora@gmail.com</p>
+        <p>📱 Phone: +91 90840 76111</p>
         <p>📍 Location: noida</p>
     </div>
 
@@ -381,37 +369,7 @@
 
     </div>
 </section>
-<section class="process-section">
-    <h2>Our Process</h2>
 
-    <div class="process-container">
-
-        <div class="process-box">
-            <span>01</span>
-            <h3>Strategy Planning</h3>
-            <p>We analyze your brand and create a growth strategy.</p>
-        </div>
-
-        <div class="process-box">
-            <span>02</span>
-            <h3>Content Creation</h3>
-            <p>Our team creates engaging content for your audience.</p>
-        </div>
-
-        <div class="process-box">
-            <span>03</span>
-            <h3>Campaign Launch</h3>
-            <p>We execute influencer and social media campaigns.</p>
-        </div>
-
-        <div class="process-box">
-            <span>04</span>
-            <h3>Growth & Analytics</h3>
-            <p>Track performance and optimize for maximum results.</p>
-        </div>
-
-    </div>
-</section>
 <section class="case-study-section" id="success">
     <h2>Our Success Stories</h2>
     <p>Real campaigns. Real growth. Real results.</p>
@@ -478,7 +436,8 @@
             <input type="email" placeholder="Your Email">
             <input type="tel" placeholder="Phone Number">
             <textarea placeholder="Tell us about your project"></textarea>
-          <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-btn" target="_blank">
+            <button type="submit">Send Message →</button>
+          <a href="https://wa.me/90840 76111" class="whatsapp-btn" target="_blank">
    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
         </form>
@@ -515,8 +474,8 @@
 
         <div class="footer-col">
             <h3>Contact</h3>
-            <p>📧 sonirishav@gmail.com</p>
-            <p>📞 +91 7983555904</p>
+            <p>📧 mediaskora@gmail.com</p>
+            <p>📞 +91 90840 76111</p>
             <p>📍 Noida, India</p>
         </div>
 
@@ -556,7 +515,7 @@
 <a href="https://wa.me/91APNANUMBER" class="whatsapp-btn" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
-<button id="topBtn">🚀</button>
+<button id="topBtn">⬆️</button>
 <script>
 let topBtn = document.getElementById("topBtn");
 
@@ -585,6 +544,11 @@ topBtn.onclick = function() {
             servicesItem.classList.toggle("active");
         }
     });
+</script>
+<script>
+document.querySelector(".menu-toggle").onclick = function(){
+    document.querySelector(".nav-links").classList.toggle("active");
+};
 </script>
 </body>
 </html>
