@@ -6,54 +6,143 @@
 <title>PR Management - Skora Media</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#f3f8fc;color:#111}
-section{padding:80px 8%}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#050735;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+nav{
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:linear-gradient(135deg,#03084f,#32107a,#5b22b8);
+}
+.logo img{
+    width: 300px;
+    height:auto;
+    display:block;
+}
+nav ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+}
+
+section{
+    padding:80px 8%;
+}
 
 .hero{
-    min-height:520px;
-    background:linear-gradient(120deg,rgba(0,55,255,.85),rgba(178,38,230,.75)),
-    url("images/brand-trust-social.jpg");
-    background-size:cover;
-    background-position:center;
+    min-height:540px;
+    background:radial-gradient(circle at top,#6728d9 0%,#1a0b63 45%,#040735 100%);
     color:white;
     display:flex;
     align-items:center;
 }
-.hero-content{max-width:850px}
-.hero small{letter-spacing:5px;font-size:18px}
-.hero h1{font-size:68px;line-height:1.2;margin:30px 0}
-.hero p{font-size:22px;line-height:1.7}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero small{
+    letter-spacing:5px;
+    font-size:17px;
+    color:#00c6ff;
+    font-weight:bold;
+}
+
+.hero h1{
+    font-size:62px;
+    line-height:1.15;
+    margin:25px 0;
+}
+
+.hero p{
+    font-size:21px;
+    color:#dcd8ff;
+    line-height:1.7;
+}
+
 .btn{
     display:inline-block;
     margin-top:35px;
-    background:white;
-    color:#0647ff;
-    padding:18px 38px;
-    border-radius:8px;
+    background:linear-gradient(90deg,#0066ff,#00c6ff);
+    color:#fff;
+    padding:17px 38px;
+    border-radius:35px;
     text-decoration:none;
-    font-size:20px;
+    font-size:19px;
     font-weight:bold;
+    box-shadow:0 10px 25px rgba(0,198,255,0.35);
+}
+
+.light-section{
+    background:linear-gradient(135deg,#060b46,#1b0b63,#42179a);
 }
 
 .about{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:60px;
+    gap:55px;
     align-items:center;
+    background:linear-gradient(135deg,#060b46,#1b0b63,#42179a);
 }
-.about img{width:100%;border-radius:15px}
-.tag{color:#0647ff;letter-spacing:5px;font-weight:bold}
-.about h2,.title{
-    font-size:48px;
-    line-height:1.3;
+
+.about img{
+    width:100%;
+    border-radius:24px;
+    box-shadow:0 20px 45px rgba(0,0,0,0.35);
+}
+
+.tag{
+    color:#00c6ff;
+    letter-spacing:5px;
+    font-weight:bold;
+}
+
+.about h2,
+.title{
+    font-size:46px;
+    line-height:1.25;
     margin:20px 0;
+    color:#fff;
 }
-.blue{color:#2747f5}
-.about p,.sub{
-    color:#5d666b;
+
+.blue{
+    color:#00c6ff;
+}
+
+.about p,
+.sub{
+    color:#d7d3ff;
     font-size:20px;
     line-height:1.8;
+}
+
+.title{
+    text-align:center;
+}
+
+.sub{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 55px;
 }
 
 .service-grid{
@@ -61,59 +150,92 @@ section{padding:80px 8%}
     grid-template-columns:repeat(4,1fr);
     gap:25px;
 }
-.service-card{
-    background:#fff;
-    padding:45px 25px;
-    border-radius:25px;
+
+.service-card,
+.blog-card,
+.logo-box{
+    background:rgba(255,255,255,0.09);
+    border:1px solid rgba(255,255,255,0.18);
+    padding:35px 25px;
+    border-radius:24px;
     text-align:center;
-    box-shadow:0 15px 35px rgba(0,0,0,.07);
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
     transition:.3s;
 }
-.service-card:hover{transform:translateY(-10px)}
+
+.service-card:hover{
+    transform:translateY(-10px);
+}
+
 .icon{
-    width:90px;
-    height:90px;
-    background:linear-gradient(135deg,#034cff,#bd2eff);
+    width:88px;
+    height:88px;
+    background:linear-gradient(135deg,#0066ff,#00c6ff);
     color:white;
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
-    margin:0 auto 30px;
-    font-size:40px;
+    margin:0 auto 28px;
+    font-size:38px;
 }
-.service-card h3{font-size:24px;margin-bottom:20px}
-.service-card p{font-size:18px;color:#666;line-height:1.7}
+
+.service-card h3{
+    font-size:23px;
+    margin-bottom:18px;
+    color:#fff;
+}
+
+.service-card p,
+.blog-card p{
+    font-size:17px;
+    color:#e6e2ff;
+    line-height:1.7;
+}
 
 .counter{
-    background:linear-gradient(120deg,#2b2ee8,#b329ea);
+    background:radial-gradient(circle at center,#42179a,#100852,#040735);
     color:white;
     display:grid;
     grid-template-columns:repeat(4,1fr);
     text-align:center;
     gap:30px;
 }
-.counter h2{font-size:48px;margin-bottom:10px}
-.counter p{font-size:20px;font-weight:bold}
+
+.counter div{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:22px;
+    padding:35px 20px;
+}
+
+.counter h2{
+    font-size:46px;
+    margin-bottom:10px;
+    color:#00c6ff;
+}
+
+.counter p{
+    font-size:19px;
+    font-weight:bold;
+}
 
 .clients{
-    background:white;
+    background:#050735;
     text-align:center;
 }
+
 .logo-row{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:30px;
     margin-top:40px;
 }
+
 .logo-box{
-    background:#fff;
-    border:1px solid #eee;
-    padding:30px;
-    font-size:26px;
+    font-size:24px;
     font-weight:bold;
-    color:#555;
-    box-shadow:0 10px 25px rgba(0,0,0,.06);
+    color:#fff;
 }
 
 .blog-grid{
@@ -121,98 +243,194 @@ section{padding:80px 8%}
     grid-template-columns:repeat(3,1fr);
     gap:30px;
 }
+
 .blog-card{
-    background:#fff;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    text-align:left;
 }
+
 .blog-card span{
-    background:linear-gradient(120deg,#044cff,#b82df2);
+    background:linear-gradient(90deg,#0066ff,#00c6ff);
     color:white;
     padding:10px 20px;
     border-radius:25px;
-    font-size:14px;
+    font-size:13px;
     letter-spacing:2px;
 }
-.blog-card h3{font-size:26px;margin:30px 0 20px;line-height:1.4}
-.blog-card p{color:#666;font-size:18px;line-height:1.7}
-.admin{margin-top:25px;font-weight:bold}
+
+.blog-card h3{
+    font-size:25px;
+    margin:28px 0 18px;
+    line-height:1.4;
+}
+
+.admin{
+    margin-top:22px;
+    color:#00c6ff;
+    font-weight:bold;
+}
 
 .contact-strip{
-    margin:0 8%;
-    background:linear-gradient(120deg,#034cff,#b82df2);
+    margin:0 8% 70px;
+    background:linear-gradient(135deg,#03084f,#32107a,#5b22b8);
     color:white;
-    border-radius:12px;
+    border-radius:22px;
     padding:35px;
     display:grid;
     grid-template-columns:1fr 1fr auto;
     gap:25px;
     align-items:center;
+    box-shadow:0 15px 35px rgba(0,0,0,0.28);
 }
-.contact-strip h3{font-size:26px}
+
+.contact-strip h3{
+    font-size:25px;
+}
+
 .contact-strip a{
-    background:white;
-    color:#0647ff;
+    background:linear-gradient(90deg,#0066ff,#00c6ff);
+    color:white;
     padding:15px 35px;
-    border-radius:6px;
+    border-radius:30px;
     text-decoration:none;
     font-weight:bold;
 }
 
 .footer{
-    background:#0d0f10;
+    background:#030420;
     color:white;
-    padding:80px 8% 30px;
+    padding:70px 8% 30px;
 }
+
 .footer-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:45px;
+    gap:40px;
 }
-.footer h3{font-size:26px;margin-bottom:25px}
-.footer p,.footer li{
+
+.footer h3{
+    font-size:24px;
+    margin-bottom:22px;
+    color:#00c6ff;
+}
+
+.footer p,
+.footer li{
     color:#ddd;
-    font-size:18px;
+    font-size:17px;
     line-height:1.8;
     list-style:none;
 }
+
 .socials span{
     display:inline-flex;
-    width:45px;
-    height:45px;
-    background:white;
-    color:#0647ff;
+    width:42px;
+    height:42px;
+    background:linear-gradient(90deg,#0066ff,#00c6ff);
+    color:white;
     align-items:center;
     justify-content:center;
-    border-radius:8px;
-    margin-right:10px;
+    border-radius:50%;
+    margin-right:8px;
     font-weight:bold;
 }
-.copy{text-align:center;margin-top:60px;color:#ccc}
+
+.copy{
+    text-align:center;
+    margin-top:55px;
+    color:#ccc;
+}
 
 @media(max-width:768px){
-    .hero h1{font-size:42px}
-    .about,.service-grid,.counter,.logo-row,.blog-grid,.contact-strip,.footer-grid{
+
+    nav{
+        padding:14px 18px;
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .logo img{
+        width:150px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
+    }
+
+    nav ul li a{
+        font-size:15px;
+    }
+
+    section{
+        padding:55px 6%;
+    }
+
+    .hero{
+        min-height:auto;
+        padding-top:65px;
+        padding-bottom:70px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p,
+    .about p,
+    .sub{
+        font-size:17px;
+    }
+
+    .about,
+    .service-grid,
+    .counter,
+    .logo-row,
+    .blog-grid,
+    .contact-strip,
+    .footer-grid{
         grid-template-columns:1fr;
     }
-    section{padding:60px 6%}
-    .about h2,.title{font-size:36px}
+
+    .about h2,
+    .title{
+        font-size:34px;
+    }
+
+    .contact-strip{
+        margin:0 6% 55px;
+        text-align:center;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/skoramedia.logo1.png" alt="Skora Media Logo">
+        </a>
+    </div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
 <section class="hero">
     <div class="hero-content">
-        <small>WE PROVIDE</small>
-        <h1>Best PR Agency & Business Consulting Services</h1>
+        <small>PR MANAGEMENT</small>
+        <h1>Build Trust, Reputation & Media Presence</h1>
         <p>
-            We help brands build reputation, manage media presence, create public trust
-            and grow with powerful PR communication strategies.
+            Skora Media helps brands create strong public perception through media relations,
+            press communication, reputation building and strategic PR campaigns.
         </p>
-        <a href="contact.html" class="btn">Learn More →</a>
+        <a href="contact.html" class="btn">Start PR Campaign →</a>
     </div>
 </section>
 
@@ -222,66 +440,66 @@ section{padding:80px 8%}
     </div>
 
     <div>
-        <p class="tag">ABOUT</p>
-        <h2>We Can Take Your Business To The <span class="blue">Next Level.</span></h2>
+        <p class="tag">ABOUT PR</p>
+        <h2>We Take Your Brand Image To The <span class="blue">Next Level.</span></h2>
         <p>
-            Skora Media provides professional PR management services that help brands
-            build authority, improve public image and connect with the right audience.
-            Our team focuses on media relations, brand communication, reputation building
-            and strategic consulting for modern businesses.
+            Our PR management services help businesses improve visibility, earn credibility
+            and communicate professionally with the market. We focus on media coverage,
+            brand storytelling, press release planning, crisis communication and reputation growth.
         </p>
     </div>
 </section>
 
-<section>
-    <h2 class="title" style="text-align:center;">Our PR Management Services</h2>
+<section class="light-section">
+    <h2 class="title">Our PR Management Services</h2>
+    <p class="sub">Everything your brand needs to build credibility and authority in the market.</p>
 
     <div class="service-grid">
         <div class="service-card">
             <div class="icon">📰</div>
             <h3>Media Relations</h3>
-            <p>We connect brands with journalists, media houses and digital publications.</p>
+            <p>We connect brands with journalists, publications and digital media platforms.</p>
         </div>
 
         <div class="service-card">
             <div class="icon">📢</div>
-            <h3>Brand Communication</h3>
-            <p>We create clear communication strategies that strengthen your brand image.</p>
+            <h3>Press Release</h3>
+            <p>We write and distribute professional press releases for brand announcements.</p>
         </div>
 
         <div class="service-card">
             <div class="icon">🤝</div>
             <h3>Reputation Management</h3>
-            <p>We help businesses build trust and maintain a positive public image.</p>
+            <p>We help brands maintain a positive image and improve public trust.</p>
         </div>
 
         <div class="service-card">
-            <div class="icon">📞</div>
-            <h3>Corporate Consulting</h3>
-            <p>We guide brands with professional PR, outreach and business growth planning.</p>
+            <div class="icon">🛡️</div>
+            <h3>Crisis Communication</h3>
+            <p>We guide brands during sensitive situations with clear communication plans.</p>
         </div>
     </div>
 </section>
 
 <section class="counter">
     <div>
-        <h2>10+</h2>
-        <p>Team Members</p>
+        <h2>100+</h2>
+        <p>Media Mentions</p>
     </div>
 
     <div>
-        <h2>800+</h2>
-        <p>Projects Completed</p>
+        <h2>50+</h2>
+        <p>PR Campaigns</p>
     </div>
 
     <div>
-        <h2>100%</h2>
-        <p>Happy Clients</p>
+        <h2>95%</h2>
+        <p>Client Satisfaction</p>
     </div>
 
     <div>
-        <h2>5+</h2>
-        <p>Services</p>
+        <h2>24/7</h2>
+        <p>Reputation Monitoring</p>
     </div>
 </section>
 
@@ -297,43 +515,44 @@ section{padding:80px 8%}
     </div>
 </section>
 
-<section>
-    <h2 class="title" style="text-align:center;">Latest Blog</h2>
+<section class="light-section">
+    <h2 class="title">Latest PR Insights</h2>
+    <p class="sub">Educational content that shows how PR helps brands grow stronger.</p>
 
     <div class="blog-grid">
         <div class="blog-card">
             <span>PR STRATEGY</span>
             <h3>How PR Helps Brands Build Trust</h3>
             <p>Public relations helps businesses create a positive image and strong market presence.</p>
-            <div class="admin">👤 admin</div>
+            <div class="admin">👤 Skora Team</div>
         </div>
 
         <div class="blog-card">
             <span>BRANDING</span>
             <h3>Why Reputation Management Matters</h3>
             <p>A strong reputation increases customer confidence and improves brand growth.</p>
-            <div class="admin">👤 admin</div>
+            <div class="admin">👤 Skora Team</div>
         </div>
 
         <div class="blog-card">
             <span>MEDIA</span>
             <h3>Importance of Media Coverage</h3>
             <p>Media coverage gives your brand credibility, authority and wider audience reach.</p>
-            <div class="admin">👤 admin</div>
+            <div class="admin">👤 Skora Team</div>
         </div>
     </div>
 </section>
 
 <div class="contact-strip">
-    <h3>📞 +91 9811139845</h3>
-    <h3>✉️ info@skoramedia.com</h3>
+    <h3>📞 +91 7983555904</h3>
+    <h3>✉️ sonirishav@gmail.com</h3>
     <a href="contact.html">Contact Us</a>
 </div>
 
 <footer class="footer">
     <div class="footer-grid">
         <div>
-            <h3>About Company</h3>
+            <h3>About Skora Media</h3>
             <p>
                 Skora Media helps brands grow through PR management, social media marketing,
                 influencer marketing and viral campaign strategies.
@@ -343,12 +562,12 @@ section{padding:80px 8%}
                 <span>f</span>
                 <span>x</span>
                 <span>▶</span>
-                <span>p</span>
+                <span>ig</span>
             </div>
         </div>
 
         <div>
-            <h3>Pages.</h3>
+            <h3>Pages</h3>
             <p>› Home</p>
             <p>› Services</p>
             <p>› About Us</p>
@@ -356,7 +575,7 @@ section{padding:80px 8%}
         </div>
 
         <div>
-            <h3>Services.</h3>
+            <h3>Services</h3>
             <p>› Social Media Marketing</p>
             <p>› Influencer Marketing</p>
             <p>› PR Management</p>
@@ -364,14 +583,14 @@ section{padding:80px 8%}
         </div>
 
         <div>
-            <h3>Contact Us.</h3>
-            <p><b>Phone:</b> +91 9811139845</p>
-            <p><b>Email:</b> info@skoramedia.com</p>
-            <p><b>Location:</b> India</p>
+            <h3>Contact Us</h3>
+            <p><b>Phone:</b> +91 7983555904</p>
+            <p><b>Email:</b> sonirishav@gmail.com</p>
+            <p><b>Location:</b> Noida, Uttar Pradesh, India</p>
         </div>
     </div>
 
-    <p class="copy">Copyright © 2026 All Right Reserved</p>
+    <p class="copy">Copyright © 2026 Skora Media. All Rights Reserved.</p>
 </footer>
 
 </body>
